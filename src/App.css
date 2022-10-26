@@ -8,3 +8,29 @@ body {
     background-color: rgb(28, 28, 29);
     color:bisque;
 }
+
+#root {
+    position: relative;
+    min-height: 100vh;
+    margin: 1rem 3rem;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+nav span {
+    justify-self: center;
+    align-self: center;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem; 
+    width: 100%;
+    text-align: center;
+}

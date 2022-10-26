@@ -6,6 +6,12 @@ function Footer() {
     <>
     <header>
         <h1>color collector</h1>
+        <nav>
+        <span>add</span>
+        <span>tags</span>
+        <span>settings</span>
+        </nav>
+
     </header>
     </>
   );

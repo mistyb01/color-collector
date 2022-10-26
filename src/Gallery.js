@@ -5,7 +5,7 @@ function Gallery() {
   return (
     <>
     <main>
-        hehe
+        
     </main>
     </>
   );
