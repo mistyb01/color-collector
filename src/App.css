@@ -50,3 +50,14 @@ footer {
     height: 100px;
     border: 2px solid white;
 }
+
+#add-popup {
+    position: absolute;
+    top: 5%;
+    width: 75%;
+    left: 12.5%;
+    padding: 1rem;
+    background-color: rgb(63, 63, 66);;
+    border: 3px solid aliceblue;
+    text-align: center;
+}
