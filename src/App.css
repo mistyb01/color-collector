@@ -38,12 +38,15 @@ footer {
 #gallery {
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     column-gap: 2rem;
+    row-gap: 2rem;
     margin-top: 2rem;
 }
 .color-palette {
     display: grid;
-    width: 400px;
-    height: 300px;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    min-width: 300px;
+    height: 100px;
+    border: 2px solid white;
 }

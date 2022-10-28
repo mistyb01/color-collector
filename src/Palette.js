@@ -1,20 +1,20 @@
 import React from 'react';
 import './App.css';
+import { paletteList } from './paletteData.js'
 
-const paletteList = [
-  {paletteId: 1, paletteName: "strawberry cake", colors: ['lightpink', 'antiquewhite', 'hotpink'] },
-  {paletteId: 2, paletteName: "summer sky", colors: ['mediumturquoise', 'aquamarine', 'skyblue'] }
-]
 
 function Palette() {
   return (
     <>
     {paletteList.map((palette, index) => (
+      <div>
       <div class='color-palette'>
         {palette.colors.map((color, index) => (
         <div style={{ 'backgroundColor': color }} >&nbsp;</div>
         ))}
-        <h3>{palette.paletteName}</h3>
+      </div>
+      <h3>{palette.paletteName}</h3>
+
       </div>
     ))}
     </>
