@@ -9,21 +9,39 @@ import { useState, useEffect } from 'react';
 
 
 function App() {
-  const [palettes, setPalettes] = useState([]);
+  const storedPalettes = JSON.parse(localStorage.getItem('savedPalettes') || '[]');
+
+  const [palettes, setPalettes] = useState(storedPalettes);
   const [addWindow, setAddWindow] = useState(false);
+
+  // state variables to hold values for a new palette
+  const [paletteName, setPaletteName] = useState('');
+  const [colorList, setColorList] = useState('');
 
   // update localStorage whenever the palettes array is updated
   useEffect(() => {
     localStorage.setItem('savedPalettes', JSON.stringify(palettes));
+    //reset previous values
+    setPaletteName('');
+    setColorList('');
   }, [palettes]);
   
   // on page load, set palettes to the saved localstorage value 
-  useEffect(() => {
-    const savedPalettes = JSON.parse(localStorage.getItem('savedPalettes'));
-    if (savedPalettes) {
-      setPalettes(savedPalettes);
+  // useEffect(() => {
+  //   const savedPalettes = JSON.parse(localStorage.getItem('savedPalettes'));
+  //   if (savedPalettes) {
+  //     setPalettes(savedPalettes);
+  //   }
+  // }, [])
+
+  function handlePaletteAdd() {
+    const newPalette = {
+      id: palettes.length, 
+      paletteName: paletteName, 
+      colors: colorList }
+    // palettes.push(newPalette);
+      setPalettes(saved => [...saved, newPalette]);
     }
-  }, [])
 
   return (
     <>
@@ -33,7 +51,13 @@ function App() {
     />
     <main>
       {addWindow && (
-        <AddPopup/>
+        <AddPopup
+          handlePaletteAdd={handlePaletteAdd}
+          colorList={colorList}
+          setColorList={setColorList}
+          paletteName={paletteName}
+          setPaletteName={setPaletteName}
+        />
       )}
     <Gallery/>
     </main>
