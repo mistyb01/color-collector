@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { paletteList } from './paletteData.js'
+// import { paletteList } from './paletteData.js'
 
 
-function Palette() {
+function Palette({paletteList}) {
 
   return (
     <>
@@ -24,8 +24,3 @@ function Palette() {
 
 export default Palette;
 
-// (<div>
-//   {this.state.people.map((person, index) => (
-//       <p>Hello, {person.name} from {person.country}!</p>
-//   ))}
-//   </div>);

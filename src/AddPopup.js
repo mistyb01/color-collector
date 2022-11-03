@@ -8,7 +8,9 @@ function AddPopup({handlePaletteAdd, setPaletteName, setColorList}) {
   }
 
   function handleColorList(e) {
-    setColorList(e.target.value);
+    let colorStr = e.target.value;
+    let colorArr = colorStr.split(',');
+    setColorList(colorArr);
   }
 
   return (

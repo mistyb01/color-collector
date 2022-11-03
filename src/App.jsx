@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js';
 import Gallery from './Gallery.js';
+import Palette from './Palette';
 import Footer from './Footer.js';
 import AddPopup from './AddPopup.js';
 import { useState, useEffect } from 'react';
@@ -39,7 +40,7 @@ function App() {
       id: palettes.length, 
       paletteName: paletteName, 
       colors: colorList }
-    // palettes.push(newPalette);
+    // add new value to a state variable that is an array of objects 
       setPalettes(saved => [...saved, newPalette]);
     }
 
@@ -59,7 +60,12 @@ function App() {
           setPaletteName={setPaletteName}
         />
       )}
-    <Gallery/>
+    
+    <section id="gallery">
+        <Palette
+          paletteList={palettes}/>
+      </section>
+
     </main>
     <Footer/>
     </>
