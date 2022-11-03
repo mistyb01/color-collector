@@ -4,27 +4,27 @@ import Header from './Header.js';
 import Gallery from './Gallery.js';
 import Footer from './Footer.js';
 import AddPopup from './AddPopup.js';
+import { useState, useEffect } from 'react';
 
 
 
 function App() {
-  const [palettes, setPalettes] = useState([]);
 
-  // get palettes from localStorage at initialization
-  useEffect(() => {
-    setCount(JSON.parse(window.localStorage.getItem('palettes')));
-  }, []);
+  const [addWindow, setAddWindow] = useState(false);
 
-  // update the stored value whenever palettes is changed!
-  useEffect(() => {
-    window.localStorage.setItem('palettes', palettes);
-  }, [palettes])
+  
 
   return (
     <>
-    <Header/>
+    <Header
+      addWindow = {addWindow}
+      setAddWindow = {setAddWindow}
+    />
     <main>
-      <AddPopup/>
+      {/* <AddPopup/> */}
+      {addWindow && (
+        <AddPopup/>
+      )}
     <Gallery/>
     </main>
     <Footer/>

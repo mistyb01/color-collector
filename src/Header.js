@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
 
-function Header() {
+function Header({addWindow, setAddWindow}) {
+
+  const handleAddWindow = event => {
+    setAddWindow(current => !current);
+  }
+
   return (
     <>
     <header>
         <h1>color collector</h1>
         <nav>
-        <span>add</span>
+        <span onClick={handleAddWindow}>add</span>
         <span>tags</span>
         <span>settings</span>
         </nav>
