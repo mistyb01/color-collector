@@ -57,7 +57,20 @@ footer {
     width: 75%;
     left: 12.5%;
     padding: 1rem;
-    background-color: rgb(63, 63, 66);;
+    background-color: rgb(63, 63, 66);
     border: 3px solid aliceblue;
     text-align: center;
+}
+
+.palette-container {
+    position: relative;
+}
+.delete-btn {
+    position: absolute;
+    top: -0.33rem;
+    right: -0.25rem;
+    color: rgb(63, 63, 66);
+    background-color: aliceblue;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
 }

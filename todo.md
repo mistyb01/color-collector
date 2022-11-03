@@ -18,10 +18,28 @@ adding new palettes
 - [ ] field for a list of tags
 - [ ] color picker
 
+more ux stuff
+
+- [ ] display a color's hex on hover
+- [ ] hovering over a palette shows an x to delete it
+
+adding complexity
+
+- [ ] display a color name, that is approximated from the rgb
+- [ ] display a colors rgb, hsl, and hex codes when you click on a square
+- [ ] feature to create palettes from an uploaded image
+- [ ] generate complimentary colors for a given color
+
+alternatives to localstorage:
+
+- one firebase that stores everything
+- or account integration
+
 helpful links
 
 - https://dev.to/producthackers/creating-a-color-palette-with-javascript-44ip
 - https://blog.bitsrc.io/5-methods-to-persisting-state-between-page-reloads-in-react-8fc9abd3fa2f
+- https://www.syncfusion.com/javascript-ui-controls/js-color-picker
 
 things to review
 
