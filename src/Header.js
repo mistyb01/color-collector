@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function Header({addWindow, setAddWindow}) {
+function Header({setAddWindow}) {
 
   const handleAddWindow = event => {
     setAddWindow(current => !current);

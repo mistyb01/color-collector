@@ -9,10 +9,21 @@ import { useState, useEffect } from 'react';
 
 
 function App() {
-
+  const [palettes, setPalettes] = useState([]);
   const [addWindow, setAddWindow] = useState(false);
 
+  // update localStorage whenever the palettes array is updated
+  useEffect(() => {
+    localStorage.setItem('savedPalettes', JSON.stringify(palettes));
+  }, [palettes]);
   
+  // on page load, set palettes to the saved localstorage value 
+  useEffect(() => {
+    const savedPalettes = JSON.parse(localStorage.getItem('savedPalettes'));
+    if (savedPalettes) {
+      setPalettes(savedPalettes);
+    }
+  }, [])
 
   return (
     <>
@@ -21,7 +32,6 @@ function App() {
       setAddWindow = {setAddWindow}
     />
     <main>
-      {/* <AddPopup/> */}
       {addWindow && (
         <AddPopup/>
       )}
