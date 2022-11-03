@@ -3,8 +3,20 @@ static html/css set up
 - [x] created react
 - [x] overall css structure
 - [x] individual palette css
-- [ ] add palette popup
+- [x] add palette popup
 - [ ] add tags popup
+
+localStorage
+
+- [x] save new palettes to a local storage value
+- [x] display stored palettes
+
+adding new palettes
+
+- [ ] a separate text field for each color
+- [ ] option to add a text field for more colors
+- [ ] field for a list of tags
+- [ ] color picker
 
 helpful links
 

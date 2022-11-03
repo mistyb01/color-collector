@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './Header.js';
-import Gallery from './Gallery.js';
 import Palette from './Palette';
 import Footer from './Footer.js';
 import AddPopup from './AddPopup.js';
@@ -27,14 +26,6 @@ function App() {
     setColorList('');
   }, [palettes]);
   
-  // on page load, set palettes to the saved localstorage value 
-  // useEffect(() => {
-  //   const savedPalettes = JSON.parse(localStorage.getItem('savedPalettes'));
-  //   if (savedPalettes) {
-  //     setPalettes(savedPalettes);
-  //   }
-  // }, [])
-
   function handlePaletteAdd() {
     const newPalette = {
       id: palettes.length, 

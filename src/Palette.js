@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import './App.css';
-// import { paletteList } from './paletteData.js'
-
 
 function Palette({paletteList}) {
 
