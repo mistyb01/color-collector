@@ -13,7 +13,7 @@ localStorage
 
 adding new palettes
 
-- [ ] show the palette being made on the form
+- [x] show the palette being made on the form
 - [x] a separate text field for each color
 - [ ] option to add a text field for more colors
 - [ ] field for a list of tags

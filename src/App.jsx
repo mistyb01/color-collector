@@ -41,6 +41,9 @@ function App() {
       addWindow = {addWindow}
       setAddWindow = {setAddWindow}
     />
+    {addWindow && (
+        <div className="dark-overlay"></div>
+    )}
     <main>
       {addWindow && (
         <AddPopup
@@ -49,8 +52,10 @@ function App() {
           setColorList={setColorList}
           paletteName={paletteName}
           setPaletteName={setPaletteName}
+          setAddWindow={setAddWindow}
         />
       )}
+      
     
     <section id="gallery">
         <Palette

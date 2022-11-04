@@ -10,14 +10,15 @@ body {
 }
 
 #root {
+    width: 100%;
     position: relative;
     min-height: 100vh;
-    margin: 1rem 6rem;
 }
 
 header{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding: 0.5rem 1rem;
 }
 nav {
     display: grid;
@@ -35,10 +36,15 @@ footer {
     text-align: center;
 }
 
+main {
+    width: 80%;
+    margin: auto;
+}
 #gallery {
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
+    justify-content: center;
     column-gap: 2rem;
     row-gap: 2rem;
     margin-top: 2rem;
@@ -54,13 +60,14 @@ footer {
 #add-popup {
     position: absolute;
     top: 5%;
+    left: 50%;
     width: 50%;
-    left: 12.5%;
+    margin-left: -25%;
     padding: 1rem;
     background-color: rgb(63, 63, 66);
     border: 3px solid aliceblue;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 #add-popup form {
@@ -69,13 +76,22 @@ footer {
     row-gap: 0.5rem;
     align-items:center;
 }
+
+.dark-overlay {
+    position: absolute;
+    background: rgba(29, 29, 29, 0.539);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    z-index: 2;
+}
 .palette-container {
     position: relative;
     
 }
 .delete-btn {
     position: absolute;
-    top: -0.33rem;
+    top: -0.5rem;
     right: -0.25rem;
     color: rgb(63, 63, 66);
     background-color: aliceblue;

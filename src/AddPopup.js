@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-function AddPopup({handlePaletteAdd, setPaletteName, colorList, setColorList}) {
+function AddPopup({handlePaletteAdd, setPaletteName, colorList, 
+  setColorList, setAddWindow}) {
 
   function handlePaletteName(e) {
-    // console.log(e.target.value);
     setPaletteName(e.target.value);
   }
 
@@ -14,9 +14,14 @@ function AddPopup({handlePaletteAdd, setPaletteName, colorList, setColorList}) {
     setColorList(colorArr);
   }
 
+  function handleWindowClose() {
+    setAddWindow(current => !current)
+  }
+
   return (
     <>
       <section id="add-popup">
+          <div className='delete-btn' onClick={handleWindowClose}>&#10005;</div>
           <h1>new palette!</h1>
           <form onSubmit={handlePaletteAdd}>
             <label>

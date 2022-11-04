@@ -11,7 +11,7 @@ function Palette({paletteList}) {
     <>
     {paletteList.map((palette, index) => (
       <div className='palette-container'>
-        <div className='delete-btn' onClick={deletePalette}>&#10005;</div>
+        {/* <div className='delete-btn' onClick={deletePalette}>&#10005;</div> */}
         <div className='color-palette'>
           {palette.colors.map((color, index) => (
             <div style={{ 'backgroundColor': color }} >&nbsp;</div>
