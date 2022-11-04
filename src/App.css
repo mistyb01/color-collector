@@ -54,7 +54,7 @@ footer {
 #add-popup {
     position: absolute;
     top: 5%;
-    width: 75%;
+    width: 50%;
     left: 12.5%;
     padding: 1rem;
     background-color: rgb(63, 63, 66);
@@ -63,6 +63,12 @@ footer {
     z-index: 2;
 }
 
+#add-popup form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: flex-end;
+}
 .palette-container {
     position: relative;
     
