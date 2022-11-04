@@ -13,7 +13,8 @@ localStorage
 
 adding new palettes
 
-- [ ] a separate text field for each color
+- [ ] show the palette being made on the form
+- [x] a separate text field for each color
 - [ ] option to add a text field for more colors
 - [ ] field for a list of tags
 - [ ] color picker
@@ -30,11 +31,6 @@ adding complexity
 - [ ] feature to create palettes from an uploaded image
 - [ ] generate complimentary colors for a given color
 
-alternatives to localstorage:
-
-- one firebase that stores everything
-- or account integration
-
 helpful links
 
 - https://dev.to/producthackers/creating-a-color-palette-with-javascript-44ip
@@ -46,3 +42,7 @@ things to review
 - css units
 - how to organize react files
 - accessibility best practices
+
+approach to building the colorlist with multiple fields
+each field adds to the same comma-separated string (a state variable).
+then that string is converted into an array when the form is submitted with split().

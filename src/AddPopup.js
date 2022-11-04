@@ -41,6 +41,13 @@ function AddPopup({handlePaletteAdd, setPaletteName, colorList, setColorList}) {
              
             <input type="submit" value="submit"/>
           </form>
+          <div className='palette-container'>
+            <div className='color-palette'>
+          {colorList && colorList.map((color) => (
+            <div style={{ 'backgroundColor': color }} >&nbsp;</div>
+          ))}
+          </div>
+          </div>
       </section>
     </>
   );
