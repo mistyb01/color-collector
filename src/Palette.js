@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 import './App.css';
 
-function Palette({paletteList}) {
+function Palette({paletteList, setPaletteList}) {
   function deletePalette(e) {
-    console.log(e);
+    let index = e.target.id;
+    let newArr = [...paletteList];
+    newArr.splice(index, 1);
+    setPaletteList(newArr);
   }
 
-  // issue: how to target the color palette when delete btn is pressed?
   return (
     <>
     {paletteList.map((palette, index) => (
       <div className='palette-container'>
-        {/* <div className='delete-btn' onClick={deletePalette}>&#10005;</div> */}
+        <div className='delete-btn' id={index} onClick={deletePalette}>&#10005;</div>
         <div className='color-palette'>
           {palette.colors.map((color, index) => (
             <div style={{ 'backgroundColor': color }} >&nbsp;</div>

@@ -15,14 +15,16 @@ adding new palettes
 
 - [x] show the palette being made on the form
 - [x] a separate text field for each color
-- [ ] option to add a text field for more colors
+- [ ] option to add more color fields
 - [ ] field for a list of tags
 - [ ] color picker
 
 more ux stuff
 
 - [ ] display a color's hex on hover
+- [x] able to delete a palette
 - [ ] hovering over a palette shows an x to delete it
+- [ ] able to edit a palette (optional?)
 
 adding complexity
 

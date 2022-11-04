@@ -53,7 +53,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
     min-width: 300px;
-    height: 100px;
+    height: 80px;
     border: 2px solid white;
 }
 

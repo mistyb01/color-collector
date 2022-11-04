@@ -59,7 +59,8 @@ function App() {
     
     <section id="gallery">
         <Palette
-          paletteList={palettes}/>
+          paletteList={palettes}
+          setPaletteList={setPalettes}/>
       </section>
 
     </main>
