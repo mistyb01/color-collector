@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-function AddPopup({handlePaletteAdd, setPaletteName, setColorList}) {
+function AddPopup({handlePaletteAdd, setPaletteName, colorList, setColorList}) {
 
   function handlePaletteName(e) {
     // console.log(e.target.value);
@@ -8,8 +8,9 @@ function AddPopup({handlePaletteAdd, setPaletteName, setColorList}) {
   }
 
   function handleColorList(e) {
-    let colorStr = e.target.value;
-    let colorArr = colorStr.split(',');
+    let colorArr = [...colorList];
+    colorArr[e.target.id] = e.target.value;
+    console.log(colorArr);
     setColorList(colorArr);
   }
 
@@ -24,10 +25,15 @@ function AddPopup({handlePaletteAdd, setPaletteName, setColorList}) {
             </label>
             <br/>
             <label>
-              colors
-              <input type="text" onChange={handleColorList}/>
+              color 1
+              <input type="text" id="0" onChange={handleColorList}/>
             </label>
             <br/>
+            <label>
+              color 2
+              <input type="text" id="1" onChange={handleColorList}/>
+            </label>
+
             <input type="submit" value="submit"/>
           </form>
       </section>
