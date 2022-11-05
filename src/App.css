@@ -77,6 +77,15 @@ main {
     align-items:center;
 }
 
+.palette-and-picker {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:center;
+    justify-content: center;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 .dark-overlay {
     position: absolute;
     background: rgba(29, 29, 29, 0.539);

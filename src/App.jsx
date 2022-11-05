@@ -17,6 +17,7 @@ function App() {
   // state variables to hold values for a new palette
   const [paletteName, setPaletteName] = useState('');
   const [colorList, setColorList] = useState([]);
+  const [currentColor, setCurrentColor] = useState('#e6e6e6')
 
   // update localStorage whenever the palettes array is updated
   useEffect(() => {
@@ -53,6 +54,8 @@ function App() {
           paletteName={paletteName}
           setPaletteName={setPaletteName}
           setAddWindow={setAddWindow}
+          currentColor={currentColor}
+          setCurrentColor={setCurrentColor}
         />
       )}
       
