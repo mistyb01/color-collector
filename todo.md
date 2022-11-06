@@ -45,6 +45,12 @@ things to review
 - how to organize react files
 - accessibility best practices
 
-approach to building the colorlist with multiple fields
-each field adds to the same comma-separated string (a state variable).
-then that string is converted into an array when the form is submitted with split().
+# new add popup:
+
+- num of fields generates user input
+- focusing a box opens a color picker. changing the color picker updates the value in the focused input box. you can still type a value into the box manually.
+  state to track:
+- the title of the new palette
+- number of colors in new palette
+- the last chosen color from the color picker
+- the input box being focused on

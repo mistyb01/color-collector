@@ -38,40 +38,19 @@ function AddPopup({handlePaletteAdd, setPaletteName, colorList,
                 <input type="text" id="0" onChange={handleColorList}/>
               </label>
               
-              <label>
-                color 2
-                <input type="text" id="1" onChange={handleColorList}/>
-              </label>
-              
-              <label>
-                color 3
-                <input type="text" id="2" onChange={handleColorList}/>
-              </label>
-              
-              <label>
-                palette name
-                <input type="text" onChange={handlePaletteName}/>
-              </label>
               
               <input type="submit" value="submit"/>
             </form>
 
-            <div className="color-picker">
+            {/* <div className="color-picker">
               <ChromePicker
                 color={currentColor}
                 onChange={handleChange}
                 disableAlpha={true}
                 />
-            </div>
+            </div> */}
           </div>
-
-          <div className='palette-container'>
-            <div className='color-palette'>
-          {colorList && colorList.map((color) => (
-            <div style={{ 'backgroundColor': color }} >&nbsp;</div>
-          ))}
-            </div>
-          </div>
+          
 
       </section>
     </>
