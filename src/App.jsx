@@ -17,8 +17,9 @@ function App() {
   // state variables to hold values for a new palette
   const [paletteName, setPaletteName] = useState('');
   const [colorList, setColorList] = useState([]);
-  const [currentColor, setCurrentColor] = useState('#e6e6e6')
-
+  const [currentColor, setCurrentColor] = useState('#e6e6e6');
+  const [paletteSize, setPaletteSize] = useState(3);
+  const [inputs, setInputs] = useState([]);
   // update localStorage whenever the palettes array is updated
   useEffect(() => {
     localStorage.setItem('savedPalettes', JSON.stringify(palettes));
@@ -27,6 +28,11 @@ function App() {
     setColorList('');
   }, [palettes]);
   
+  // for addPopup: update # of inputs boxes whenever palleteSize changes
+  useEffect(() => setInputs(
+    Array.from({length: paletteSize}).map((item, i) => <input type="text" key={i}/>)
+  ), [paletteSize])
+
   function handlePaletteAdd() {
     const newPalette = {
       id: palettes.length, 
@@ -56,6 +62,10 @@ function App() {
           setAddWindow={setAddWindow}
           currentColor={currentColor}
           setCurrentColor={setCurrentColor}
+          paletteSize={paletteSize}
+          setPaletteSize={setPaletteSize}
+          inputs={inputs}
+          setInputs={setInputs}
         />
       )}
       

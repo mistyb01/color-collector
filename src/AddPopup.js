@@ -2,10 +2,16 @@ import React from 'react';
 import './App.css';
 import { ChromePicker } from 'react-color';
 function AddPopup({handlePaletteAdd, setPaletteName, colorList, 
-  setColorList, setAddWindow, currentColor, setCurrentColor}) {
+  setColorList, setAddWindow, currentColor, setCurrentColor,
+paletteSize, setPaletteSize, inputs, setInputs}) {
 
+  
   function handlePaletteName(e) {
     setPaletteName(e.target.value);
+  }
+
+  function handlePaletteSize(e) {
+    setPaletteSize(e.target.value);
   }
 
   function handleColorList(e) {
@@ -25,6 +31,8 @@ function AddPopup({handlePaletteAdd, setPaletteName, colorList,
     setCurrentColor(color.hex);
   }
 
+
+
   return (
     <>
       <section id="add-popup">
@@ -34,11 +42,18 @@ function AddPopup({handlePaletteAdd, setPaletteName, colorList,
             <form onSubmit={handlePaletteAdd}>
 
               <label>
-                color 1
-                <input type="text" id="0" onChange={handleColorList}/>
+                # of colors
+                <input type="number" value={paletteSize} onChange={handlePaletteSize}/>
               </label>
               
+              <label>
+                palette name
+                <input type="text" onChange={handlePaletteName}/>
+              </label>
               
+              <div className="palette-form">
+                {inputs}
+              </div>
               <input type="submit" value="submit"/>
             </form>
 
@@ -50,8 +65,6 @@ function AddPopup({handlePaletteAdd, setPaletteName, colorList,
                 />
             </div> */}
           </div>
-          
-
       </section>
     </>
   );
